@@ -12,4 +12,20 @@ public class PetDTO {
         this.kind = kind;
         this.profileString = profileString;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Kind getKind() {
+        return kind;
+    }
+
+    public String getProfileString() {
+        return profileString;
+    }
 }

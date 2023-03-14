@@ -1,8 +1,12 @@
 package com.switchfully.petinder;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class PetMapper {
     private Pet pet;
     private PetDTO petDTO;
@@ -20,6 +24,6 @@ public class PetMapper {
     }
 
     public Pet toPet(PetDTO petDTO){
-        return new Pet(pet.getId(), pet.getName(), pet.getKind(), pet.getProfileString());
+        return new Pet(petDTO.getId(), petDTO.getName(), petDTO.getKind(), petDTO.getProfileString());
     }
 }
